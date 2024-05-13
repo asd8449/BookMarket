@@ -2,7 +2,7 @@ package bookmarket.view;
 
 import java.util.Scanner;
 
-import bookmarket.model.BookStotage;
+import bookmarket.model.BookStorage;
 import bookmarket.model.Cart;
 
 public class ConsoleView {
@@ -34,7 +34,7 @@ public class ConsoleView {
 		System.out.println("=========================================");
 	}
 
-	public void displayBookInfo(BookStotage mBookStorage) {
+	public void displayBookInfo(BookStorage mBookStorage) {
 		for (int i = 0; i < mBookStorage.getNumBooks(); i++) {
 			String bookInfo = mBookStorage.getBookInfo(i);
 			System.out.println(bookInfo);
@@ -64,7 +64,7 @@ public class ConsoleView {
 		return false;
 	}
 
-	public int selectBookId(BookStotage bookStorage) {
+	public int selectBookId(BookStorage bookStorage) {
 		int bookId;
 		boolean result;
 		do {

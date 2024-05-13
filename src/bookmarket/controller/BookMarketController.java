@@ -1,6 +1,6 @@
 package bookmarket.controller;
 
-import bookmarket.model.BookStotage;
+import bookmarket.model.BookStorage;
 import bookmarket.model.Cart;
 import bookmarket.view.ConsoleView;
 import bookmarket.user.*;
@@ -9,7 +9,7 @@ public class BookMarketController {
 	client client = new client();
 	admin admin = new admin();
 	ConsoleView view;
-	BookStotage mBookStorage;// model이란 의미로 접두사 m
+	BookStorage mBookStorage;// model이란 의미로 접두사 m
 	Cart mCart;
 	String[] aMenuList = { "0. 로그아웃", "1. 도서 추가", "2. 도서 삭제", "3. 도서 정보 수정" };
 	String[] cMenuList = { "0. 로그아웃", "1. 도서 정보 보기", "2. 장바구니 보기", "3. 장바구니 도서 담기", "4. 장바구니 편집", "5. 장바구니 비우기" };
@@ -17,8 +17,8 @@ public class BookMarketController {
 	public BookMarketController() {
 	}// default constructor
 
-	public BookMarketController(BookStotage bookStotage, Cart cart, ConsoleView view) {
-		this.mBookStorage = bookStotage;
+	public BookMarketController(BookStorage bookStorage, Cart cart, ConsoleView view) {
+		this.mBookStorage = bookStorage;
 		this.mCart = cart;
 		this.view = view;
 	}

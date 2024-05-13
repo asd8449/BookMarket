@@ -5,7 +5,7 @@ import java.util.List;
 
 public class Cart {
     List<CartItem> itemList = new ArrayList<>();
-    int numItems = 0;
+    //int numItems = 0;
 
     public boolean isEmpty() {
         return itemList.isEmpty();
@@ -13,10 +13,6 @@ public class Cart {
 
     public int getNumItems() {
         return itemList.size();
-    }
-
-    public void setNumItems(int numItems) {
-        this.numItems = numItems;
     }
 
     public List<CartItem> getItemList() {
@@ -41,12 +37,15 @@ public class Cart {
     }
 
     private CartItem getCartItem(Book book) {
-        for (int i = 0 ; i < getNumItems() ; i++) {
-            if (itemList.get(i).getBook() == book) {
-            	System.out.println(itemList.get(i).getBook().toString());
-                return itemList.get(i);
-            }
-        }
+//        for (int i = 0 ; i < getNumItems() ; i++) {
+//            if (itemList.get(i).getBook() == book) {
+//            	System.out.println(itemList.get(i).getBook().toString());
+//                return itemList.get(i);
+//            }
+//        }
+    	for(CartItem item:itemList) {
+    		if(item.getBook() == book)return item;
+    	}
         return null;
     }
 
@@ -61,6 +60,5 @@ public class Cart {
 
     public void resetCart() {
         itemList.clear();
-//        this.itemList = new CartItem[64];
     }
 }
